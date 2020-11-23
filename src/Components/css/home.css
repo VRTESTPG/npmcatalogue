@@ -1,0 +1,800 @@
+
+@font-face {
+    font-family: DomaineDispNar-Regular;
+    src: url("/fonts/DomaineDispNar-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: akkurat_reg;
+  src:  url("/fonts/Akkurat_regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold, Proxima Nova';
+    src: url("/fonts/Proxima-Nova-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Proxima_Nova_Reg;
+  src:  url("/fonts/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face{
+    font-family: 'Proxima_Semi_Bold';
+    src:  url("./fonts/Proxima-Nova-Sbold.otf") format("opentype");
+}
+
+body
+{
+    background-color:#F7F7F9;
+}
+
+.homeStyle
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.homeStyleUntoggle
+{
+    overflow-y: auto;
+}
+
+.logoRow
+{
+    position:absolute;
+    top:0%;
+    z-index:99;
+    width:100%;
+}
+
+.countryTitle
+{
+    font-family: 'Proxima_Semi_Bold';
+    font-size:2.25vh;
+    font-weight: bold;
+}
+
+.skiiLogo
+{
+    width:45%;
+    margin-top:5%;
+    margin-left:5%;
+    opacity: 100%;
+
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+}
+
+.skiiLogoFaded
+{
+    opacity:0%;
+    width:45%;
+    margin-top:5%;
+    margin-left:5%;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+}
+
+.favLogo
+{
+    float:right;
+    margin-right:-10%;
+    margin-top:7.5%;
+}
+
+.HeaderTitle
+{
+    font-family: akkurat_reg;
+    font-size:3.5vh;
+    margin-left:1%;
+    margin-top:2.5%;
+}
+
+/*this is for all css related to store listing*/
+
+.storeListingUnloaded
+{
+    position: absolute;
+    top:100%;
+    transition: all 0.5s;
+    opacity:0;
+    z-index:1;
+    height:0px;
+}
+
+.storeListingLoaded
+{
+    position: absolute;
+    top:0%;
+    width:100%;
+    transition: all 0.5s;
+    background-color:#F7F7F9;
+    z-index:1;
+}
+
+.storeSelectorSelected
+{
+    font-family:'Proxima_Semi_Bold';
+    /*float: left;*/
+    /*width: 50%;*/
+    text-align: center;
+    color:white;
+    margin-top:1.5%;
+    /*border-bottom: solid 2px black;*/
+    font-weight:bold;
+    font-size:2.5vh;
+    text-decoration: underline;
+    text-underline-position: under;
+    letter-spacing:0.1rem;
+}
+
+.storeSelectorUnSelected
+{
+    font-family:'Proxima_Semi_Bold';
+    /*float: left;*/
+    /*width: 50%;*/
+    text-align: center;
+    color:#B91131;
+    margin-top:1.5%;
+    /*border-bottom: solid 2px black;*/
+    font-weight:bold;
+    font-size:2.5vh;
+    letter-spacing: 0.1rem;
+}
+
+.popUpUnSelected
+{
+    font-family:'Proxima_Semi_Bold';
+    /*float: right;*/
+    /*width: 50%;*/
+    text-align: center;
+    color:#B91131;
+    margin-top:1.5%;
+    /*border-bottom: solid 2px black;*/
+    font-weight:bold;
+    font-size:2.5vh;
+    letter-spacing: 0.1rem;
+}
+
+.popUpSelected
+{
+    font-family:'Proxima_Semi_Bold';
+    /*float: right;*/
+    /*width: 50%;*/
+    text-align: center;
+    color:white;
+    margin-top:1.5%;
+    /*border-bottom: solid 2px black;*/
+    font-weight:bold;
+    font-size:2.5vh;
+    text-decoration: underline;
+    text-underline-position: under;
+    letter-spacing: 0.1rem;
+}
+
+.storeListingHeader
+{
+    font-family:'Proxima_Semi_Bold';
+    margin-left:5%;
+    font-size:3.5vh;
+    margin-top:1%;
+    font-weight: bold;
+    color:#B91131;
+}
+
+.storeListingSubHeader
+{
+    font-family: 'Proxima_Semi_Bold';
+    font-size: 2.25vh;
+    margin-left:5%;
+}
+
+.expScrollBox
+{
+    /*display: flex;
+    flex-wrap: nowrap;*/
+    overflow-y: auto;
+    height:140px;
+    padding-bottom: 2%;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.thumbnailScrollBox
+{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    padding-bottom: 2%;
+
+}
+
+.cards
+{
+    flex: 0 0 auto;
+    /*width: 100%;*/
+    margin-left: 3vh;
+    margin-top:2%;
+    text-align:center;
+}
+
+.imgThumbnails
+{
+    flex: 0 0 auto;
+    width: 20%;
+    margin-top:5%;
+    text-align:center;
+}
+
+.imgThumbNailSelected
+{
+    filter:opacity(0.5);
+    border: 2px solid #B91131;
+    border-radius: 4px;
+    opacity: 0.5;
+    object-fit:cover;
+}
+
+.imgThumbNailUnselected
+{
+    border-radius: 4px;
+    opacity: 1;
+    object-fit:cover;
+}
+
+.expBoxHidden
+{
+    opacity: 0;
+    pointer-events: none;
+    height : 0;
+    transition: opacity 0.1s ease-in;
+    width:70%;
+}
+
+.expBoxUnhidden
+{
+    opacity: 1;
+    pointer-events: auto;
+    height : 100%;
+    transition: opacity 0.1s ease-in;
+    width:70%;
+}
+
+/*this is for all store content information*/
+
+.storeInformationUnloaded
+{
+    position: absolute;
+    top:100%;
+    transition: all 0.5s;
+    opacity:0;
+    z-index:2;
+    
+}
+
+.storeInformationLoaded
+{
+    position: absolute;
+    top:0%;
+    transition: all 0.5s;
+    /*background-color:white;*/
+    z-index:2;
+}
+
+.StoreInformationTitle
+{
+    font-size: 1.8rem;
+    font-family:'Proxima_Semi_Bold';
+}
+
+.StoreInformationTitleContainer
+{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.StoreInformationSubTitleContainer
+{
+    text-align:center;
+}
+
+.StoreInformationSubTitle
+{
+    font-size: 2.2vh;
+    font-family:'Proxima_Semi_Bold';
+}
+
+.image-gallery-slide img {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+    height:50px !important;
+}
+
+/* exp all content */
+
+
+.expInformationUnloaded
+{
+    position: absolute;
+    top:100%;
+    transition: all 0.5s;
+    opacity:0;
+    z-index:3;
+}
+
+.expInformationLoaded
+{
+    position: absolute;
+    top:0%;
+    transition: all 0.5s;
+    background-color:white;
+    z-index:3;
+}
+
+.ContentInformationTitle
+{
+    width: 90%;
+    margin-left: 2.5%;
+    font-weight:bold;
+    font-family:'Proxima_Semi_Bold';
+    color:#BA0C2F;
+    font-size: 2.2vh;
+}
+
+.ContentInformationContent
+{
+    margin-left:2.5%;
+    font-family:'Proxima_Semi_Bold';
+    font-size: 2vh;
+}
+
+
+.ContentInformationTitleMobile
+{
+    width: 90%;
+    margin-left: 2.5%;
+    font-weight:bold;
+    font-family:'Proxima_Semi_Bold';
+    color:#BA0C2F;
+    font-size: 2.5vh;
+}
+
+.ContentInformationContentMobile
+{
+    margin-left:2.5%;
+    font-family:'Proxima_Semi_Bold';
+    font-size: 2vh;
+}
+
+/* search content css */
+
+
+.searchListingUnloaded
+{
+    position: absolute;
+    top:100%;
+    transition: all 0.5s;
+    opacity:0;
+    z-index:1;
+    height:0px;
+}
+
+.searchListingLoaded
+{
+    position: absolute;
+    top:0%;
+    transition: all 0.5s;
+    background-color:white;
+    z-index:1;
+    width:100%;
+
+}
+
+/* desktop css */
+.logoRowDesktop
+{
+    position:absolute;
+    top:0%;
+    
+    width: 100%;
+    max-width: 1024px;
+}
+
+.skiiLogoDesktop
+{
+    width:20%;
+    margin-top:5%;
+    margin-left:5%;
+    opacity: 100%;
+
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+}
+
+.skiiLogoFadedDesktop
+{
+    opacity:0%;
+    width:20%;
+    margin-top:5%;
+    margin-left:5%;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+}
+
+.favLogoDesktop
+{
+    float:right;
+    margin-top:2%;
+}
+
+.crossDesktop
+{
+    width:5%;
+    float: right;
+}
+
+.categoryHeader
+{
+    margin-top:6.5%;
+    height:50px;
+    color:white;
+    background-color:#b91131;
+    width:100%;
+    margin-right:unset;
+    margin-left:unset;
+    font-family:'Proxima_Semi_Bold';
+}
+
+.innerStoreListingDesktop
+{
+    width:70%;
+    margin-top:1%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    opacity: 1;
+    z-index:2;
+    padding-bottom:1%
+}
+
+.innerStoreListingMobile
+{
+    width:90%;
+    margin-top:3%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    opacity: 1;
+    z-index:1;
+    margin-left:5%;
+}
+
+.storeListingThumbnailDesktop
+{
+    width:100%;
+    height:171px;
+    background: transparent 0% 0% no-repeat padding-box;
+    border: 1px solid #B91131;
+    border-radius: 4px;
+    opacity: 1;
+    margin-top:3.5%;
+    object-fit:cover;
+}
+
+
+.storeListingThumbnailMobile
+{
+    width: 96%;
+    height: 166px;
+    background: transparent 0% 0% no-repeat padding-box;
+    border: 1px solid #B91131;
+    border-radius: 4px;
+    opacity: 1;
+    object-fit: cover;
+    margin-top: 2%;
+}
+
+.expImgFrame
+{
+    border: 1px solid #B91131;
+    border-radius: 4px;
+    opacity: 1;
+    object-fit: cover;
+}
+
+.expNameTitle
+{
+    font-family:'Proxima_Semi_Bold';
+    font-weight: 700;
+}
+
+.viewExpDetails
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding-right:10%;
+}
+
+.contentAboutExp
+{
+    /*background: #B91131 0% 0% no-repeat padding-box;*/
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.contentBoxAboutExp
+{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+    padding-bottom: 10%;
+}
+
+.expListingForStoreInfo
+{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 4px;
+    opacity: 1;
+    z-index:2;
+}
+
+.imageThumbnailExp
+{
+    border: 1px solid #B91131;
+    border-radius: 4px;
+    opacity: 1;
+    object-fit:cover;
+}
+
+.widthMax
+{
+    width:100%;
+}
+
+.widthZero
+{
+    width:unset !important;
+}
+
+.SelectedTopCategory
+{
+    margin-top:1vw;
+    font-weight:bold;
+    text-decoration:underline;
+    text-underline-position: under;
+}
+
+.unSelectedTopCateogry
+{
+    margin-top:1vw;
+    font-weight:bold;
+}
+
+.searchCross
+{
+    width: 3.5%;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 2%;
+}
+
+.searchCrossMobile
+{
+    width: 10%;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 1%;
+    margin-top: 1%;
+}
+
+.SelectedStoreCategoryDesktop
+{
+    margin-top:1vw;
+    font-weight:bold;
+    text-decoration:underline;
+    text-underline-position: under;
+    font-family:'Proxima_Semi_Bold';
+    letter-spacing: 0.1rem;
+}
+
+.UnselectedStoreCategoryDesktop
+{
+    margin-top:1vw;
+    font-weight:bold;
+    font-family:'Proxima_Semi_Bold';
+    letter-spacing: 0.1rem;
+}
+
+.SelectedStoreCategoryMobile
+{
+    margin-top:3vw;
+    font-weight:bold;
+    text-decoration:underline;
+    text-underline-position: under;
+    letter-spacing: 0.05rem;
+}
+
+.UnselectedStoreCategoryMobile
+{
+    margin-top:3vw;
+    font-weight:bold;
+    letter-spacing: 0.05rem;
+}
+
+.storeListingHeaderMobile
+{
+    font-family:'Proxima_Semi_Bold';
+    margin-left:2.5%;
+    font-size:2.5vh;
+    margin-top:1%;
+    font-weight: bold;
+    color:#B91131;
+}
+
+
+.storeListingSubHeaderMobile
+{
+    font-family: 'Proxima_Semi_Bold';
+    font-size: 2vh;
+    margin-left:2.5%;
+}
+
+.expBoxHiddenMobile
+{
+    opacity: 0;
+    pointer-events: none;
+    height : 0;
+    transition: opacity 0.1s ease-in;
+    width:90%;
+    margin-left:5%
+}
+
+.expBoxUnhiddenMobile
+{
+    opacity: 1;
+    pointer-events: auto;
+    height : 100%;
+    transition: opacity 0.1s ease-in;
+    width:90%;
+    margin-left:5%
+}
+
+.expScrollBoxMobile
+{
+    /*display: flex;
+    flex-wrap: nowrap;*/
+    overflow-y: auto;
+    height:120px;
+    padding-bottom: 2%;
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.cardsMobile
+{
+    flex: 0 0 auto;
+    /*width: 100%;*/
+    margin-top:5%;
+    text-align:center;
+    margin-bottom:2.5%
+}
+
+.mobileBackText
+{
+    text-align: left;
+text-decoration: underline;
+font-family: 'Proxima_Semi_Bold';
+letter-spacing: 0px;
+color: #B91131;
+opacity: 1;
+font-weight:bold;
+}
+
+.viewExpDetailsMobile
+{
+    width: 175%;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+}
+
+.mobileRowStyle
+{
+    margin-top:5%;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+
+.adminPanelHiddenMobile
+{
+    opacity: 0;
+    pointer-events: none;
+    height : 0;
+    transition: opacity 0.1s ease-in;
+    width:90%;
+    margin-left:5%
+}
+
+.adminPanelUnhiddenMobile
+{
+    opacity: 1;
+    pointer-events: auto;
+    height : 100%;
+    transition: opacity 0.1s ease-in;
+    width:100%;
+    text-align: -webkit-center;
+}
+
+
+
+.adminPanelHidden
+{
+    opacity: 0;
+    pointer-events: none;
+    height : 0;
+    transition: opacity 0.1s ease-in;
+    width:70%;
+}
+
+.adminPanelUnhidden
+{
+    opacity: 1;
+    pointer-events: auto;
+    height : 100%;
+    transition: opacity 0.1s ease-in;
+    width:100%;
+    text-align: -webkit-center;
+}
+
+.adminContentBox
+{
+    /*display: flex;
+    flex-wrap: nowrap;*/
+    padding-bottom: 2%;
+    
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.searchBar
+{
+    border-radius: 12px;
+    border: white;
+    opacity: 0.75;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.tabSelected
+{
+    width:50%;
+    background: #B91131 0% 0% no-repeat padding-box;
+}
+
+.tabUnselected
+{
+    width:50%;
+    background: #e5e5e5 0% 0% no-repeat padding-box;
+}
