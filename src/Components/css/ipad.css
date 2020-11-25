@@ -17,7 +17,7 @@ and (orientation : portrait) {
   /* Styles */
   .logoRowDesktop
   {
-    max-width: 600px !important;
+    max-width: 1000px !important;
   }
 
   .storeInformationLoaded
@@ -33,5 +33,23 @@ and (orientation : portrait) {
   .popUpUnSelected
   {
     margin-top:2% !important;
+  }
+
+  .skiiLogo
+  {
+    opacity:1 !important;
+    -webkit-transition: -webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    -moz-transition:-webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    -ms-transition:-webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    -o-transition:-webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+  }
+
+  .skiiLogoDesktop
+  {
+    opacity:1 !important;
+    -webkit-transition: -webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    -moz-transition:-webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    -ms-transition:-webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    -o-transition:-webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
   }
 }
